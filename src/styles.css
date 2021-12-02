@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+:root {
+	--stf-cookies-primary-color: #ffd400;
+	--stf-cookies-border-color: #161616;
+	--stf-cookies-dark-color: #161616;
+	--stf-cookies-light-color: #ffffff;
+	--stf-cookies-font-size: 14px;
+	--stf-cookies-font-family: 'Source Code Pro', monospace;
+	--stf-cookies-border-radius: 0px;
+}
+
+.stf-cookies * {
+	font-family: var(--stf-cookies-font-family);
+	font-size: var(--stf-cookies-font-size);
+}
+
+.stf-cookies button,
+.stf-cookies input,
+.stf-cookies label {
+	cursor: pointer;
+	transition: 0.2s ease;
+}
+
+.stf-cookies button {
+	border: none;
+}
+
+.stf-cookies {
+	box-sizing: border-box;
+
+	position: fixed;
+	z-index: 4;
+	left: 8px;
+	bottom: 0;
+
+	max-width: 976px;
+	padding: 32px;
+
+	color: var(--stf-cookies-dark-color);
+	background-color: var(--stf-cookies-light-color);
+	border: 2px solid var(--stf-cookies-border-color);
+	border-top-right-radius: calc(var(--stf-cookies-border-radius) * 2);
+	border-bottom: none;
+
+	transform: translateY(100%);
+	transition: 0.3s ease;
+}
+
+.stf-cookies--active {
+	transform: translateY(0);
+}
+
+.stf-cookies__title {
+	margin-top: 0;
+	margin-bottom: 16px;
+
+	font-weight: bold;
+	font-size: calc(var(--stf-cookies-font-size) + 6px);
+}
+
+.stf-cookies__description,
+.stf-cookies__description p,
+.stf-cookies__description a {
+	display: inline;
+	font-size: var(--stf-cookies-font-size);
+	color: var(--stf-cookies-secondary-color);
+}
+
+.stf-cookies__toggle {
+	position: absolute;
+	top: -34px;
+	left: -2px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32px;
+	padding: 6px 8px;
+
+	font-weight: bold;
+	font-size: var(--stf-cookies-font-size);
+	color: var(--stf-cookies-dark-color);
+	background-color: var(--stf-cookies-primary-color);
+	border-top-left-radius: var(--stf-cookies-border-radius);
+	border-top-right-radius: var(--stf-cookies-border-radius);
+}
+
+.stf-cookies__toggle img {
+	height: 100%;
+}
+
+.stf-cookies__form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 16px;
+}
+
+.stf-cookies__fields {
+	flex: 1;
+}
+
+.stf-cookies__field {
+	display: inline-flex;
+	margin-right: 16px;
+	font-size: var(--stf-cookies-font-size);
+}
+
+.stf-cookies__field input {
+	vertical-align: middle;
+}
+
+.stf-cookies__controls button {
+	padding: 8px 16px;
+	margin-left: 8px;
+}
+
+.stf-cookies__controls button:active {
+	transform: scale(0.95);
+}
+
+.stf-cookies__controls button:first-of-type {
+	color: var(--stf-cookies-dark-color);
+	background-color: transparent;
+}
+
+.stf-cookies__controls button:last-of-type {
+	color: var(--stf-cookies-light-color);
+	background-color: var(--stf-cookies-dark-color);
+	border-radius: var(--stf-cookies-border-radius);
+}
+
+@media screen and (max-width: 992px) {
+	.stf-cookies {
+		width: calc(100% - 16px);
+		max-width: 100%;
+	}
+
+	.stf-cookies__fields,
+	.stf-cookies__controls {
+		width: 100%;
+	}
+
+	.stf-cookies__controls {
+		margin-top: 16px;
+	}
+
+	.stf-cookies__controls button {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.stf-cookies__controls button:last-of-type {
+		margin-top: 16px;
+	}
+}

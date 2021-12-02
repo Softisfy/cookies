@@ -1,14 +1,35 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body,
+#root {
+	height: 100%;
+	width: 100%;
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
+#logo {
+	height: 96px;
+	margin-bottom: 96px;
+}
+
+/* Cookies component styling overrides */
+/* :root {
+	--stf-cookies-primary-color: #444c56;
+	--stf-cookies-border-color: #444c56;
+	--stf-cookies-dark-color: #adbac7;
+	--stf-cookies-light-color: #22272e;
+	--stf-cookies-border-radius: 4px;
+	--stf-cookies-font-size: 13px;
+	--stf-cookies-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+.stf-cookies__toggle img {
+	filter: invert(1);
+} */
