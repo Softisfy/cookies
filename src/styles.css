@@ -5,7 +5,7 @@
 	--stf-cookies-border-color: #161616;
 	--stf-cookies-dark-color: #161616;
 	--stf-cookies-light-color: #ffffff;
-	--stf-cookies-font-size: 14px;
+	--stf-cookies-font-size: 0.875rem;
 	--stf-cookies-font-family: 'Source Code Pro', monospace;
 	--stf-cookies-border-radius: 0px;
 }
@@ -55,8 +55,8 @@
 	margin-top: 0;
 	margin-bottom: 16px;
 
+	font-size: calc(var(--stf-cookies-font-size) * 1.75);
 	font-weight: bold;
-	font-size: calc(var(--stf-cookies-font-size) + 6px);
 }
 
 .stf-cookies__description,
@@ -96,26 +96,31 @@
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
-	margin-top: 16px;
+	margin-top: 32px;
 }
 
-.stf-cookies__fields {
+.stf-cookies__types {
 	flex: 1;
 }
 
-.stf-cookies__field {
+.stf-cookies__type {
 	display: inline-flex;
 	margin-right: 16px;
 	font-size: var(--stf-cookies-font-size);
 }
 
-.stf-cookies__field input {
+.stf-cookies__type input {
 	vertical-align: middle;
+}
+
+.stf-cookies__controls {
+	display: flex;
+	gap: 16px;
 }
 
 .stf-cookies__controls button {
 	padding: 8px 16px;
-	margin-left: 8px;
+	border-radius: var(--stf-cookies-border-radius);
 }
 
 .stf-cookies__controls button:active {
@@ -124,36 +129,33 @@
 
 .stf-cookies__controls button:first-of-type {
 	color: var(--stf-cookies-dark-color);
+	border: 2px solid var(--stf-cookies-dark-color);
 	background-color: transparent;
 }
 
 .stf-cookies__controls button:last-of-type {
 	color: var(--stf-cookies-light-color);
 	background-color: var(--stf-cookies-dark-color);
-	border-radius: var(--stf-cookies-border-radius);
 }
 
 @media screen and (max-width: 992px) {
 	.stf-cookies {
 		width: calc(100% - 16px);
 		max-width: 100%;
+		padding: 16px;
 	}
 
-	.stf-cookies__fields,
+	.stf-cookies__types,
 	.stf-cookies__controls {
 		width: 100%;
 	}
 
 	.stf-cookies__controls {
-		margin-top: 16px;
+		flex-direction: column;
+		margin-top: 32px;
 	}
 
 	.stf-cookies__controls button {
 		width: 100%;
-		margin-left: 0;
-	}
-
-	.stf-cookies__controls button:last-of-type {
-		margin-top: 16px;
 	}
 }

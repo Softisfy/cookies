@@ -10,30 +10,28 @@
 yarn add @softisfy/cookies
 ```
 
-## Usage
+## Use
 
 ```jsx
-import CookiesComponent from '@softisfy/cookies';
+import CookiesDialog from '@softisfy/cookies';
 import '@softisfy/cookies/dist/index.css';
 
 const App = () => {
 	return (
-		<CookiesComponent
+		<CookiesDialog
+			toggle="![Cookie](/cookie.svg)"
 			title="This website uses cookies"
-			description={
-				<p>
-					We use cookies to provide social media features and to analyse our
-					traffic. We also share information about your use of our site with our
+			description="
+					We use cookies to provide social media features and to analyse our traffic. 
+					We also share information about your use of our site with our 
 					social media and analytics partners who may combine it with other
-					information that you've provided to them. <a href="/">Learn more.</a>
-				</p>
-			}
-			toggle={<img src="/cookie.svg" alt="Cookie" />} // can also be a simple string
+					information that you've provided to them. [Learn more](/).
+				"
 			controls={{
 				all: 'Accept all cookies',
 				selected: 'Accept selected cookies'
 			}}
-			fields={[
+			types={[
 				{
 					id: 'necessary',
 					label: 'Necessary',
@@ -72,7 +70,7 @@ const App = () => {
 };
 ```
 
-## Styles
+## Customize
 
 For this part, you have three options:
 
@@ -82,7 +80,7 @@ For this part, you have three options:
 import '@softisfy/cookies/dist/index.css';
 ```
 
-2. Override the default stylesheet with your own. Example:
+2. Override the default stylesheet with your own. (Optional) Example:
 
 ```css
 :root {
@@ -97,7 +95,12 @@ import '@softisfy/cookies/dist/index.css';
 }
 ```
 
-3. Use your own stylesheet.
+3. Use your own stylesheet. (Optional)
+
+## Demo
+
+Live: [Netlify](https://softisfy-cookies.netlify.app).
+Code: [Repo](https://softisfy.github.io/cookies/example).
 
 ## License
 
