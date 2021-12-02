@@ -100,7 +100,8 @@ import '@softisfy/cookies/dist/index.css';
 ## Demo
 
 Live: [Netlify](https://softisfy-cookies.netlify.app).
-Code: [Repo](https://softisfy.github.io/cookies/example).
+
+Code: [Repo](https://github.com/softisfy/cookies/tree/main/example).
 
 ## License
 
