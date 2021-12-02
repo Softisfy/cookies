@@ -6,10 +6,10 @@ import '@softisfy/cookies/dist/index.css';
 const App = () => {
 	return (
 		<React.Fragment>
-			<img id="logo" src="/logo.svg" alt="_cookies" />
+			<img id="logo" src="./logo.svg" alt="_cookies" />
 
 			<CookiesDialog
-				toggle="![Cookie](/cookie.svg)"
+				toggle="![Cookie](./cookie.svg)"
 				title="This website uses cookies"
 				description="
 					We use cookies to provide social media features and to analyse our traffic. 
@@ -30,7 +30,7 @@ const App = () => {
 						scripts: [
 							{
 								location: 'head',
-								src: '/scripts/script-A.js'
+								src: './scripts/script-A.js'
 							}
 						]
 					},
@@ -40,7 +40,7 @@ const App = () => {
 						scripts: [
 							{
 								location: 'body',
-								src: '/scripts/script-B.js'
+								src: './scripts/script-B.js'
 							}
 						]
 					},
@@ -50,7 +50,7 @@ const App = () => {
 						scripts: [
 							{
 								location: 'head',
-								src: '/scripts/script-C.js'
+								src: './scripts/script-C.js'
 							}
 						]
 					}

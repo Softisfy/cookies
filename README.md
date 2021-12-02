@@ -12,6 +12,8 @@ yarn add @softisfy/cookies
 
 ## Use
 
+Check the [example](https://github.com/softisfy/cookies/tree/main/example) directory for a full working example.
+
 ```jsx
 import CookiesDialog from '@softisfy/cookies';
 import '@softisfy/cookies/dist/index.css';
@@ -80,7 +82,7 @@ For this part, you have three options:
 import '@softisfy/cookies/dist/index.css';
 ```
 
-2. Override the default stylesheet with your own. (Optional) Example:
+2. Override the default stylesheet with your own properties. (Optional) Example:
 
 ```css
 :root {
@@ -96,12 +98,6 @@ import '@softisfy/cookies/dist/index.css';
 ```
 
 3. Use your own stylesheet. (Optional)
-
-## Demo
-
-Live: [Netlify](https://softisfy-cookies.netlify.app).
-
-Code: [Repo](https://github.com/softisfy/cookies/tree/main/example).
 
 ## License
 
