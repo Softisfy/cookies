@@ -20,6 +20,7 @@ interface IScript {
 	location: 'head' | 'body';
 	src: string;
 }
+
 interface IType {
 	id: string;
 	label: string;
@@ -61,14 +62,14 @@ const unloadScripts = () => {
 	});
 };
 
-const CookiesDialog = ({
+const CookiesDialog: React.FC<IProps> = ({
 	cookieName = 'GDPR',
 	title,
 	description,
 	toggle,
 	types,
 	controls
-}: IProps) => {
+}) => {
 	const [controlledTypes, setControlledTypes] = useState<IType[]>([]);
 	const [isActive, setActive] = useState(false);
 

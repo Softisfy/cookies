@@ -4,7 +4,10 @@
   "author": "softisfy",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "softisfy/cookies",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softisfy/cookies.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -55,5 +58,17 @@
   "dependencies": {
     "js-cookie": "^3.0.1",
     "markdown-to-jsx": "^7.1.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/softisfy/cookies/issues"
+  },
+  "homepage": "https://github.com/softisfy/cookies#readme",
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "cookies",
+    "gdpr",
+    "react"
+  ]
 }
