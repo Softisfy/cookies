@@ -2,7 +2,7 @@
   "name": "@softisfy/cookies",
   "description": "A GDPR compliant cookies component for React",
   "author": "softisfy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -70,5 +70,6 @@
     "cookies",
     "gdpr",
     "react"
-  ]
+  ],
+  "types": "./dist\\index.d.ts"
 }
