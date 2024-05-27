@@ -1,18 +1,19 @@
-import React from 'react';
-
+import * as React from 'react';
 import CookiesDialog from '@softisfy/cookies';
-import '@softisfy/cookies/dist/index.css';
 
-const App = () => {
+import '@softisfy/cookies/dist/index.css';
+import '../globals.css';
+
+const IndexPage: React.FC<PageProps> = () => {
 	return (
-		<React.Fragment>
-			<img id="logo" src="./logo.svg" alt="_cookies" />
+		<main>
+			<img id="logo" src="./logo.svg" alt="_cookies" height="96" width="400" />
 
 			<CookiesDialog
 				toggle="![Cookie](./cookie.svg)"
 				title="This website uses cookies"
 				description="
-					We use cookies to provide social media features and to analyse our traffic. 
+					We use cookies to provide social media features and to analyze our traffic. 
 					We also share information about your use of our site with our 
 					social media and analytics partners who may combine it with other
 					information that you've provided to them. [Learn more](/).
@@ -20,6 +21,12 @@ const App = () => {
 				controls={{
 					all: 'Accept all cookies',
 					selected: 'Accept selected cookies'
+				}}
+				onClickAll={() => {
+					console.log('User opted for All Cookies');
+				}}
+				onClickSelected={() => {
+					console.log('User opted for Selected Cookies');
 				}}
 				types={[
 					{
@@ -56,8 +63,10 @@ const App = () => {
 					}
 				]}
 			/>
-		</React.Fragment>
+		</main>
 	);
 };
 
-export default App;
+export default IndexPage;
+
+export const Head: HeadFC = () => <title>Home Page</title>;

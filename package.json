@@ -2,7 +2,7 @@
   "name": "@softisfy/cookies",
   "description": "A GDPR compliant cookies component for React",
   "author": "softisfy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,13 +18,14 @@
     "dev": "microbundle-crl watch --no-compress --format modern,cjs --css-modules false",
     "build": "microbundle-crl --no-compress --format modern,cjs --css-modules false",
     "prepare": "run-s build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd example && yarn install && yarn run build --prefix-paths",
+    "deploy": "gh-pages -d example/public"
   },
   "peerDependencies": {
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-unicode-property-regex": "^7.18.6",
     "@types/js-cookie": "^3.0.1",
     "@types/node": "^12.12.38",
     "@types/react": "^16.9.27",

@@ -1,39 +1,30 @@
 {
-  "name": "cookies-example",
-  "homepage": ".",
-  "version": "0.0.0",
+  "name": "cookie-dialog-example",
+  "version": "1.0.0",
   "private": true,
+  "description": "cookie-dialog-example",
+  "author": "Softisfy",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "dev": "node ../node_modules/react-scripts/bin/react-scripts.js start",
-    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
-    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/node": "link:../node_modules/@types/node",
-    "@types/react": "link:../node_modules/@types/react",
-    "@types/react-dom": "link:../node_modules/@types/react-dom",
-    "react": "link:../node_modules/react",
-    "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "typescript": "link:../node_modules/typescript",
-    "@softisfy/cookies": "link:.."
+    "@softisfy/cookies": "link:..",
+    "gatsby": "^5.13.5",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "typescript": "^5.3.3"
   }
 }

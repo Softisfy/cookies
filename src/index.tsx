@@ -14,6 +14,8 @@ interface IProps {
 	};
 	types: IType[];
 	cookieName?: string;
+	onClickAll: () => void;
+	onClickSelected: () => void;
 }
 
 interface IScript {
@@ -68,7 +70,9 @@ const CookiesDialog: React.FC<IProps> = ({
 	description,
 	toggle,
 	types,
-	controls
+	controls,
+	onClickAll,
+	onClickSelected
 }) => {
 	const [controlledTypes, setControlledTypes] = useState<IType[]>([]);
 	const [isActive, setActive] = useState(false);
@@ -98,8 +102,10 @@ const CookiesDialog: React.FC<IProps> = ({
 
 		let currentTypes;
 		if (target.name === 'selected') {
+			onClickSelected && onClickSelected();
 			currentTypes = controlledTypes;
 		} else if (target.name === 'all') {
+			onClickAll && onClickAll();
 			currentTypes = controlledTypes.map((type) => ({
 				...type,
 				checked: true
@@ -110,11 +116,9 @@ const CookiesDialog: React.FC<IProps> = ({
 
 		const activeTypes = currentTypes?.filter((type) => type.checked) || [];
 
-		Cookies.set(
-			cookieName,
-			activeTypes.map((type) => type.id),
-			{ expires: 365 }
-		);
+		Cookies.set(cookieName, activeTypes.map((type) => type.id).join(','), {
+			expires: 365
+		});
 
 		loadScripts(activeTypes);
 	};
@@ -147,7 +151,7 @@ const CookiesDialog: React.FC<IProps> = ({
 
 			{title && <h2 className="stf-cookies__title">{title}</h2>}
 			<div className="stf-cookies__description">
-				<Markdown>{description}</Markdown>
+				<Markdown options={{ forceInline: true }}>{description}</Markdown>
 			</div>
 
 			<form className="stf-cookies__form">
